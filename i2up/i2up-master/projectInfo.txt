@@ -1,0 +1,55 @@
+########################################################################################################
+soft dependences:
+jdk-8u221-windows-x64
+eclipse-java-2019-06-R-win32-x86_64 + plugin TestNG7.0.0.201908240652(from http://beust.com/eclipse) 
+chromedriver_win327603809126(from http://chromedriver.storage.googleapis.com/index.html)
+Google Chrome	76.0.3809.132 (正式版本) （64 位） (cohort: Stable)
+
+Ready dependences under project home:
+common/lib:
+json-20170516.jar
+log4j-1.2.17.jar
+selenium-server-standalone-3.5.3.jar
+common
+chromedriver                        --------> it is chromedriver_win327603809126
+
+
+
+########################################################################################################
+java src framework:
+info2soft.qa                        --------> reserve for framework testrunner
+info2soft.qa.common                 --------> reserve for framework ui test wrapper
+info2soft.qa.auto                   --------> reserve for project ui test cases
+info2soft.qa.auto.test.base         --------> project ui test/page base extended ui test wrapper
+info2soft.qa.auto.pageobject        --------> project ui page objects extended PageBase
+info2soft.qa.auto.dataobject        --------> project ui mapping data objects like node,rule and i2up strings etc.
+info2soft.qa.auto.test              --------> all of project test scripts extended TestBase, todo refactor: common test and function test.
+info2soft.qa.auto.util              --------> project specific util tool, like Json/Ssh util
+info2soft.qa.auto.exception         --------> project exception settings
+
+
+
+########################################################################################################
+test framework under project home
+results/                            ---------> test result summary directory.
+results/compiled                    ---------> all of compiled project binary files.
+testdata/                           ---------> test data includes ui xpath data, component test properties/json definition
+testdata/testsuite/                 ---------> testsuite definition like testng.xml etc.
+testdata/upload/                    ---------> test upload data like i2up license txt file.
+testdata/input/                     ---------> test input data like i2up ui input data file TestData.json.
+common/                             ---------> common setting like log4j.properties
+common/lib/                         ---------> common lib dependences and test report templates
+resources/                          ---------> any of project related resources
+python/                             ---------> any of project related python scripts
+script/                             ---------> any of project related shell scripts
+perl/                               ---------> any of project related perl scripts
+
+root files under project home
+1, projectInfo.txt                  ---------> description of the project.
+2, InstanceInfo.xml                 ---------> test suite settings.
+
+
+
+########################################################################################################
+
+

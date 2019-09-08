@@ -1,0 +1,72 @@
+{
+    "loginUserName": "admin",
+    "loginPwd": "welcome1",
+    "i2upIp": "172.20.77.53",
+    "i2upPort": "58086",
+    "version": "7.1.55",
+    "testList":[
+        {
+            "name": "node management",
+            "node": [
+                {
+                     "name": "osname1",
+                     "ccIp": "172.20.77.53",
+                     "port": "26821",
+                     "dataIp": "172.20.77.53",
+                     "user": "root",
+                     "pwd": "123456",
+                     "note": "xyz"
+                },
+                {
+                     "name": "osname2",
+                     "ccIp": "172.20.77.54",
+                     "port": "26821",
+                     "dataIp": "172.20.77.54",
+                     "user": "root",
+                     "pwd": "123456",
+                     "note": "abcxyz"
+                }
+            ]
+        },
+        {
+            "name": "copy rule",
+            "copyRule": [
+                {
+                     "name": "copyrule1",
+                     "srcNode": "osname1",
+                     "backupNode": "osname2",
+                     "mapType": "多对一",
+                     "srcDir": "/whbtest/",
+                     "backupDir": "/test/"
+                },
+                {
+                     "name": "copyrule2",
+                     "srcNode": "osname1",
+                     "backupNode": "osname2",
+                     "mapType": "多对一",
+                     "srcDir": "/home/i2_1432/",
+                     "backupDir": "/test1432/"
+                }
+            ]
+        },
+        {
+            "name": "compare rule",
+            "compareRule": [
+                {
+                     "name": "comparerule1",
+                     "srcNode": "osname1",
+                     "backupNode": "osname2",
+                     "srcDir": "/whbtest/",
+                     "backupDir": "/test/"
+                },
+                {
+                     "name": "comparerule2",
+                     "srcNode": "osname1",
+                     "backupNode": "osname2",
+                     "srcDir": "/home/i2_1432/",
+                     "backupDir": "/test1432/"
+                }
+            ]
+        }
+     ]
+}

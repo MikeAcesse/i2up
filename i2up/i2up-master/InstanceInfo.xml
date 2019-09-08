@@ -1,0 +1,26 @@
+<input>
+
+<!--  Common configuration  -->
+<param name="BUILD" value="LATEST_LABEL" />
+<param name="TESTSUITE" value="testdata\TestSuite\test.xml"/>
+
+<!-- node information -->
+<param name="name"  value="testNode1"/>
+<param name="ccIp" value="172.20.77.53"/>
+<param name="port" value="26821"/>
+<param name="dataIp" value="172.20.77.53"/>
+<param name="user" value="root"/>
+<param name="pwd" value="123456"/>
+<param name="note" value="xyz"/>
+
+<!-- copy rule information -->
+<param name="srcNode" value="testNode1"/>
+<param name="backupNode" value="443"/>
+<param name="srcDir" value="/whbtest/"/>
+<param name="backupDir" value="/test/"/>
+
+<!-- General information -->
+<param name="ACCOUNT_PASSWORD" value="welcome1"/>
+<param name="user" value="admin"/>
+
+</input>
