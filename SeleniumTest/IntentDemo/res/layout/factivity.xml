@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button1_fisrt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通过第一种方式启动页面" />
+
+    <Button
+        android:id="@+id/button2_Second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通过第二种方式启动页面" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="把第二个页面回传回来的数据显示出来" />
+
+</LinearLayout>

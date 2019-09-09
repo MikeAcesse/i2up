@@ -1,0 +1,7 @@
+#过滤.metadata/ 	.recommenders/
+.metadata/
+.recommenders/
+#过滤文件
+*.jpg
+*.png
+*.log

@@ -1,0 +1,110 @@
+java.io.File�����ڱ�ʾ�ļ���Ŀ¼��
+File��ֻ���ڱ�ʾ�ļ���Ŀ¼������Ϣ�����ơ���С�ȣ������������ļ����ݵķ���
+
+RandomAccessFile java�ṩ�Ķ��ļ����ݵķ��ʣ��ȿ��Զ��ļ���Ҳ����д�ļ���
+RandomAccessFile֧����������ļ������Է����ļ�������λ��
+
+(1)java�ļ�ģ��
+  ��Ӳ���ϵ��ļ���byte byte byte�洢��,�����ݵļ���
+(2)���ļ�
+  ������ģʽ"rw"(��д)  "r"��ֻ��)
+  RandomAccessFile raf = new RandomeAccessFile(file,"rw")
+  �ļ�ָ�룬���ļ�ʱָ���ڿ�ͷ pointer = 0;
+(3) д����
+    raf.write(int)--->ֻдһ���ֽڣ���8λ),ͬʱָ��ָ����һ��λ�ã�׼���ٴ�д��
+(4)������
+   int b = raf.read()--->��һ���ֽ�
+��5���ļ���д����Ժ�һ��Ҫ�رգ�Oracle�ٷ�˵����
+
+
+���л�������������л�
+1��������int ת����4byte��������������ת����byte�Ĺ��̽����л�
+     ����---->n byte
+2)�����л�
+    ��n��byte ת����һ�����ݵĹ���
+    nbyte ---> ����
+3)RandomAccessFile�ṩ�������͵Ķ�д���������Խ�������������
+   ���л����ļ����߽��ļ����ݷ����л�Ϊ����
+ IO��(�������������)
+ �ֽ������ַ���
+ 1.�ֽ���
+ 1)InputStream��OutputStream
+    InputStream������Ӧ�ó����ȡ���ݵķ�ʽ
+    OutputStream������Ӧ�ó���д�����ݵķ�ʽ 
+ 2)EOF = End   ����-1�Ͷ�����β
+ 3)��������������
+   int  b = in.read();��ȡһ���ֽ��޷�����䵽int�Ͱ�λ.-1�� EOF
+   in.read(byte[] buf) 
+   in.read(byte[] buf,int start,int size)
+4)�������������
+  out.write(int b)  д��һ��byte������b�ĵ�8λ
+  out.write(byte[] buf)��buf�ֽ����鶼д�뵽��
+  out.write(byte[] buf,int start,int size)
+  
+ 5)FileInputStream--->����ʵ�������ļ��϶�ȡ����
+ 6)FileOutputStream ʵ�������ļ���д��byte���ݵķ���
+ 7)DataOutputStream/DataInputStream
+    ��"��"���ܵ���չ�����Ը��ӷ���Ķ�ȡint,long���ַ�����������
+   DataOutputStream
+        writeInt()/writeDouble()/writeUTF()
+
+ 8)BufferedInputStream&BufferedOutputStream
+ ����������λIO�ṩ�˴��������Ĳ�����һ����ļ�����д��
+ ���ȡ����ʱ��������ϻ��壬������ģʽ�����IO������
+ ��Ӧ�ó����а���������ļ����൱�ڽ�һ��ˮ���뵽��һ������:
+ FileOutputStream--->write()�����൱��һ��һ�εذ�ˮ��ת�ơ���ȥ
+ DataOutputStream-->writeXxx()�����᷽��һЩ���൱��һưһư��ˮ��ת�ơ���ȥ
+ BufferedOutputStream--->write���������㣬�൱��һƮһư�ȷ���Ͱ�У��ٴ�Ͱ�е��뵽��һ�����У����������
+   
+   
+ 2.�ַ���
+ 1) ��������
+ 2)��ʶ�ı����ı��ļ�
+ java���ı�(char)��16λ�޷������������ַ���unicode���루˫�ֽڱ���)
+ �ļ���byte byte byte ...����������
+�ı��ļ����ı�(char)���а���ĳ�ֱ��뷽��(utf-8,utf-16be,gbk)���л�Ϊbyte�Ĵ洢���
+3)�ַ���(Reader Writer)---->���������ı��ı��ļ�
+�ַ��Ĵ���һ�δ���һ���ַ�
+�ַ��ĵײ���Ȼ�ǻ������ֽ�����
+�ַ����Ļ���ʵ��
+   InputStreamReader   ���byte������Ϊchar��,���ձ������
+   OutputStreamWriter  �ṩchar����byte�������ձ��봦��  
+   
+   FileReader/FileWriter
+ �ַ����Ĺ�����
+   BufferedReader   ---->readLine һ�ζ�һ��
+   BufferedWriter/PrintWriter   ---->дһ��    
+   
+   
+3.��������л��������л�
+1)�������л������ǽ�Objectת����byte���У���֮�ж���ķ����л� 
+2)���л���(ObjectOutputStream),�ǹ�����----writeObject
+   �����л���(ObjectInputStream)---readObject
+
+3)���л��ӿ�(Serializable)
+   �������ʵ�����л��ӿ� �����ܽ������л������򽫳����쳣
+   ����ӿڣ�û���κη�����ֻ��һ����׼
+ 
+4) transient�ؼ���
+    private void writeObject(java.io.ObjectOutputStream s)
+		        throws java.io.IOException
+	private void readObject(java.io.ObjectInputStream s)
+		        throws java.io.IOException, ClassNotFoundException
+		        
+   ����ArrayListԴ�������л��ͷ����л�������
+ 
+5)���л��� ����͸��๹�캯���ĵ�������
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+   
+   
+   
+   
+   

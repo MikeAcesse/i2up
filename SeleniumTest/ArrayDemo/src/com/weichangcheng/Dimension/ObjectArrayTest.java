@@ -1,0 +1,12 @@
+package com.weichangcheng.Dimension;
+
+public class ObjectArrayTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("我来了");
+
+	}
+
+}
